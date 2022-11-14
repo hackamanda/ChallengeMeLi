@@ -2,7 +2,7 @@
 //  DetailViewController.swift
 //  ChallengeMeli
 //
-//  Created by Amanda Hack  on 16/09/22.
+//  Created by Amanda Hack  on 04/11/22.
 //
 
 import UIKit

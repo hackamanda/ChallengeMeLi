@@ -2,7 +2,7 @@
 //  FavoritesView.swift
 //  ChallengeMeli
 //
-//  Created by Amanda Hack  on 16/09/22.
+//  Created by Amanda Hack  on 09/11/22.
 //
 
 import UIKit

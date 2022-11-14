@@ -2,7 +2,7 @@
 //  HomeView.swift
 //  ChallengeMeli
 //
-//  Created by Amanda Hack  on 16/09/22.
+//  Created by Amanda Hack  on 04/11/22.
 //
 
 import UIKit
@@ -24,11 +24,16 @@ class HomeView: UIView {
         return searchBar
     }()
     
-    lazy var tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.rowHeight = 100
-        return tableView
+    lazy var OfertasButton: UIButton = {
+    let button = UIButton()
+    button.translatesAutoresizingMaskIntoConstraints = false
+    button.setTitle("Ofertas", for: .normal)
+    button.setTitleColor(UIColor.white, for: .normal)
+    button.backgroundColor = .systemBlue
+    button.layer.cornerRadius = 6.0
+    button.layer.borderWidth = 2
+    button.layer.borderColor = UIColor.systemBlue.cgColor
+    return button
     }()
     
     override init(frame: CGRect) {
@@ -43,15 +48,14 @@ class HomeView: UIView {
     
     private func setUpViews() {
         backgroundColor = .systemGray6
-        addSubview(tableView)
+        addSubview(OfertasButton)
     }
     
     private func setUpConstraints() {
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
+        OfertasButton.heightAnchor.constraint(equalToConstant: 40),
+        OfertasButton.leftAnchor.constraint(equalTo: leftAnchor, constant: 40),
+        OfertasButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -40),
+        OfertasButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -400)])
     }
 }
